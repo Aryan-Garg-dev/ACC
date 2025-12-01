@@ -1,8 +1,11 @@
 package AOC2025.DAY1;
 
 import AOC2025.PuzzleLoader;
+import AOC2025.Timer;
 import utility.Console;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -38,7 +41,7 @@ public class Puzzle1 {
     return count;
   }
 
-  public static int password2(int start, List<Move> moves){
+  public static int password2(int start, List<Move> moves) {
     int count = 0;
     for (Move move : moves) {
       count += move.steps / 100;
@@ -46,8 +49,7 @@ public class Puzzle1 {
       if (move.direction == 'L') {
         if (start > 0 && start - steps <= 0) count++;
         start = (100 + start - steps) % 100;
-      }
-      else if (move.direction == 'R') {
+      } else if (move.direction == 'R') {
         if (start + steps >= 100) count++;
         start = (start + steps) % 100;
       }
@@ -57,8 +59,10 @@ public class Puzzle1 {
 
   public static void main(String[] args) {
     List<Move> input = loadPuzzle("src/files/input1.txt");
-    Console.log()
-      .println(password(50, input))
-      .println(password2(50, input));
+    Timer.measure(()->{
+      Console.log()
+        .println(password(50, input))
+        .println(password2(50, input));
+    });
   }
 }
