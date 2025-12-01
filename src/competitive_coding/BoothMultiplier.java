@@ -5,7 +5,7 @@ import utility.Console;
 import java.util.Scanner;
 
 public class BoothMultiplier {
-
+  
   public long multiply(int M, int Q) {
     int A = 0;      // Accumulator
     int Q_1 = 0;    // Previous bit

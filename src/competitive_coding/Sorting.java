@@ -29,7 +29,7 @@ class NaturalOrder implements Comparator<String> {
   }
 }
 
-class QuickSort {
+class QuickSort { // Avg O(nlogn) Worst O(n^2)
   private static void _swapInt(int[] arr, int i, int j){
     int temp = arr[i];
     arr[i] = arr[j];

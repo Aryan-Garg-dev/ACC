@@ -72,8 +72,7 @@ public class Console {
   public static String stringify(Object obj) {
     if (obj == null) return "null";
 
-    Class<?> cls = obj.getClass();
-    if (!cls.isArray()) return obj.toString();
+    if (!obj.getClass().isArray()) return obj.toString();
 
     StringBuilder sb = new StringBuilder();
     deepArrayToStringRecursive(obj, sb);

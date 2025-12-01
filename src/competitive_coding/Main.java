@@ -9,6 +9,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * josephus(N, K) = (josephus(N – 1 , K) + K – 1) % N + 1.
+ *
+ *
+ * */
+
 public class Main {
   static Input input = new Input();
 
@@ -183,6 +189,6 @@ public class Main {
   }
 
   public static void main(String[] args) {
-    schedulePractice();
+    sortingPractice();
   }
 }

@@ -17,7 +17,7 @@ public class Permutation implements Iterable<String>, Iterator<String> {
     return ans;
   }
 
-  private void reverse(char[] arr, int left, int right) {
+  private void  reverse(char[] arr, int left, int right) {
     while (left < right) {
       char t = arr[left];
       arr[left] = arr[right];
