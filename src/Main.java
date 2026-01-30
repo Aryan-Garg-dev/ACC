@@ -1,24 +1,41 @@
-import utility.Input;
-
+import utility.Console;
+import utility.Pair;
+import utility.Validation;
+import utility.env.Dotenv;
+import utility.env.EnvVar;
+import utility.events.EventEmitter;
 import java.util.Arrays;
-import java.util.Optional;
-import java.util.Scanner;
 
 public class Main {
-  public static int a, b;
-
-  public static void swap(){
-    a = a + b;
-    b = a - b;
-    a = a - b;
-  }
 
   public static void main(String[] args) {
-    Input input = new Input();
-    a = input.prompt("Enter a: ").readInt();
-    b = input.prompt("Enter b: ").readInt();
-    System.out.println(Arrays.asList(a, b));
-    swap();
-    System.out.println(Arrays.asList(a, b));
+
+    Dotenv.config(
+      Pair.of("HELLO", new EnvVar<String>(String::new, Validation.regex("[A-Za-z]+"))),
+      Pair.of("WORLD", new EnvVar<>(
+        v-> Arrays
+          .stream(v.split(","))
+          .mapToInt(Integer::parseInt)
+          .toArray()
+      )),
+      Pair.of("PORT", new EnvVar<>(Integer::parseInt, 3000))
+    );
+
+    Dotenv env = Dotenv.load();
+
+    Console.log()
+      .println(env)
+      .println("----------------------------------")
+      .println(env.get("HELLO", String.class))
+      .println(env.get("WORLD", int[].class))
+      .println(env.get("PORT", Integer.class));
+
+
+
+    EventEmitter emitter = new EventEmitter();
+    emitter.on("hello", (recipients)->Console.log().print("Hello ").println(recipients));
+    emitter.emit("hello", "World", "Everyone");
+
+    
   }
 }
