@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox
+    xmlns="http://javafx.com/javafx"
+    xmlns:fx="http://javafx.com/fxml"
+    fx:controller="com.garg.shopping_cart.ShoppingCartController"
+    prefHeight="400.0" prefWidth="600.0" spacing="15"
+>
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15" />
+    </padding>
+
+    <HBox spacing="10">
+        <Label text="Product Name:" />
+        <TextField fx:id="productField" promptText="Enter Product name:" HBox.hgrow="ALWAYS" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Add to Cart" onAction="#handleAddToCart" />
+        <Button text="Remove from Cart" onAction="#handleRemoveFromCart" />
+        <Button text="Clear Cart" onAction="#handleClearCart" />
+    </HBox>
+
+    <ListView fx:id="cartListView" prefHeight="250" />
+    <Label fx:id="statusLabel" text="Cart is empty." />
+</VBox>
