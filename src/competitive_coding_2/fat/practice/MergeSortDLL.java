@@ -1,16 +1,16 @@
-package competitive_coding_2;
+package competitive_coding_2.fat.practice;
 
 import utility.Console;
+import utility.Input;
 
-public class SortBitonicDLL {
-  public static class ListNode {
+public class MergeSortDLL {
+  static class ListNode {
     int value;
-    ListNode prev;
-    ListNode next;
+    ListNode prev, next;
 
-    public ListNode(int val){
-      value = val;
-      prev = next = null;
+    public ListNode(int value){
+      this.value = value;
+      this.prev = this.next = null;
     }
 
     public static ListNode reverse(ListNode head){
@@ -39,9 +39,31 @@ public class SortBitonicDLL {
         return second;
       }
     }
+
+    public static ListNode getMiddle(ListNode head){
+      if (head == null) return null;
+      ListNode slow = head, fast = head.next;
+      while (fast != null && fast.next != null){
+        slow = slow.next;
+        fast = fast.next.next;
+      }
+      return slow;
+    }
+
+    public static ListNode mergeSort(ListNode head){
+      if (head == null || head.next == null) return head;
+      ListNode middle = getMiddle(head);
+      ListNode right = middle.next;
+      middle.next = null;
+      right.prev = null;
+      return merge(
+        mergeSort(head),
+        mergeSort(right)
+      );
+    }
   }
 
-  public static class LinkedList{
+  static class LinkedList {
     ListNode head;
     ListNode tail;
     int size;
@@ -52,6 +74,7 @@ public class SortBitonicDLL {
     }
 
     public LinkedList(int[] nums){
+      this();
       for (int num: nums) add(num);
     }
 
@@ -67,42 +90,25 @@ public class SortBitonicDLL {
     }
 
     public int[] toArray(){
-      int[] array = new int[size];
+      int[] arr = new int[size];
       ListNode iter = head;
       int i = 0;
-      while (iter != null) {
-        array[i++] = iter.value;
+      while (iter != null){
+        arr[i++] = iter.value;
         iter = iter.next;
       }
-      return array;
+      return arr;
     }
   }
 
-  public static void sortBitonicDLL(LinkedList list){
-    if (list.head == null || list.head.next == null) return;
-
-    if (list.size <= 2) return;
-
-    // identify peak
-    ListNode peak = list.head.next;
-    while (peak != null){
-      if (peak.value < peak.prev.value) break;
-      else peak = peak.next;
-    }
-
-    if (peak == null) return;
-    peak.prev.next = null;
-    peak.prev = null;
-
-    ListNode second = ListNode.reverse(peak);
-    list.head = ListNode.merge(list.head, second);
-  }
-
-
+  public final static Input input = new Input();
   public static void main(String[] args) {
-    LinkedList list = new LinkedList(new int[]{ 5, 7, 9, 10, 4, 2, 1 });
-    sortBitonicDLL(list);
+    int size = input.prompt("Enter size: ").readInt();
+    LinkedList list = new LinkedList(
+      input.prompt("Input array: ").readIntArray(size)
+    );
     Console.log().println(list.toArray());
+    list.head = ListNode.mergeSort(list.head);
+    Console.debug().println(list.toArray());
   }
 }
-

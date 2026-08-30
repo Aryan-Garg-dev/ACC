@@ -1,4 +1,4 @@
-package competitive_coding_2;
+package competitive_coding_2.cat_1;
 
 public class LinkedList <T> {
   private static class ListNode <T> {

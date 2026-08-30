@@ -1,7 +1,5 @@
-package competitive_coding_2;
+package competitive_coding_2.cat_1;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;

@@ -1,7 +1,4 @@
-package competitive_coding_2;
-
-import java.util.ArrayList;
-import java.util.List;
+package competitive_coding_2.cat_1;
 
 public class EvenOddSegregation {
   public static class ListNode {

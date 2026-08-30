@@ -1,5 +1,7 @@
 package competitive_coding_2.cat_2;
 
+import utility.Console;
+
 import java.util.*;
 
 public class ViewsOfTree {
@@ -201,7 +203,7 @@ public class ViewsOfTree {
   }
 
   public static void main(String[] args) {
-    int[] treeNodes = { 1, 2, 3, 4, -1, 5, 6 };
+    int[] treeNodes = { 1, 2, 3, -1, 4, -1, -1 };
     TreeNode root = buildTree(treeNodes, 0);
     printHorizontalView(root);
     printVerticalView(root);
