@@ -1,6 +1,6 @@
 package competitive_coding_2.cat_2;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.*;
 
@@ -92,6 +92,6 @@ public class DialsAlgorithm {
     for (int[] edge: edges) g.addEdge(edge[0], edge[1], edge[2]);
 
     int[] res = g.shortestPath(src);
-    Console.log().println(res);
+    Logger.log().println(res);
   }
 }

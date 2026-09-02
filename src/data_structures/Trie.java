@@ -1,6 +1,6 @@
 package data_structures;
 
-import utility.Console;
+import utility.Logger;
 
 public class Trie {
   public static final int CHILDREN_LIMIT = 26;
@@ -97,7 +97,7 @@ class Practice {
     public static void main(String[] args) {
       String[] words = { "i", "like", "sam", "samsung", "mobile", "ice" };
       String[] key = {"ilikesamsung", "ilikesung"};
-      Console.log()
+      Logger.log()
         .println(wordBreak(words, key[0]))
         .println(wordBreak(words, key[1]));
     }
@@ -113,7 +113,7 @@ class Practice {
       String[] words = { "apple", "app", "mango", "man", "woman" };
       String[] prefix = { "app", "moon" };
 
-      Console.log()
+      Logger.log()
         .println(startsWith(words, prefix[0]))
         .println(startsWith(words, prefix[1]));
     }
@@ -131,7 +131,7 @@ class Practice {
     }
 
     public static void main(String[] args) {
-      Console.log()
+      Logger.log()
         .println(countUniqueSubstrings("ababa"))
         .println(countUniqueSubstrings("apple"));
     }
@@ -161,7 +161,7 @@ class Practice {
 
     public static void main(String[] args) {
       String[] words = { "a", "banana", "app", "appl", "ap", "apply", "apple" };
-      Console.log()
+      Logger.log()
         .println(getLongestWordWithAllPrefixes(words));
     }
   }

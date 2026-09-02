@@ -1,5 +1,6 @@
 package utility;
 
+import java.io.Closeable;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,7 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class Input {
+public class Input implements Closeable {
   private final Scanner sc;
   private final InputStream source;
 
@@ -21,6 +22,10 @@ public class Input {
     sc = new Scanner(this.source);
   }
 
+  public Scanner getScanner(){
+    return this.sc;
+  }
+
   public int readInt(){
     int input = sc.nextInt();
     sc.nextLine(); // consumes newline left by nextInt
@@ -31,7 +36,6 @@ public class Input {
     return sc.nextLine();
 
   }
-
 
   public int[] readIntArray(int size){
     int[] arr = new int[size];

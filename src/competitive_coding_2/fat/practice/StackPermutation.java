@@ -1,6 +1,6 @@
 package competitive_coding_2.fat.practice;
 
-import utility.Console;
+import utility.Logger;
 import utility.Input;
 import utility.Pair;
 
@@ -23,7 +23,7 @@ public class StackPermutation {
   public final static Input input = new Input();
   public static void main(String[] args) {
     int size = input.prompt("Enter size: ").readInt();
-    Console.debug().println(
+    Logger.debug().println(
       isStackPermutation(
         input.prompt("Enter original sequence: ").readIntArray(size),
         input.prompt("Enter target sequence: ").readIntArray(size)

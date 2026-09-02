@@ -1,6 +1,6 @@
 package competitive_coding_2.cat_2;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.*;
 

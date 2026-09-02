@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -48,7 +48,7 @@ public class Q2241 {
     }
 
     private void log(){
-      Console.debug()
+      Logger.debug()
         .println("Available")
         .print(denomiations)
         .print(bankNotes)
@@ -59,10 +59,10 @@ public class Q2241 {
   public static void main(String[] args) {
     ATM machine = new ATM();
     machine.deposit(new int[]{ 0, 0, 1, 2, 1 });
-    Console.log().print(machine.withdraw(600));
+    Logger.log().print(machine.withdraw(600));
     machine.deposit(new int[]{ 0, 1, 0, 1, 1 });
-    Console.log().print(machine.withdraw(600));
-    Console.log().print(machine.withdraw(550));
+    Logger.log().print(machine.withdraw(600));
+    Logger.log().print(machine.withdraw(550));
 
   }
 }

@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 import utility.Input;
 
 import java.util.ArrayList;
@@ -40,6 +40,6 @@ public class Q1146 {
     array.set(0, 5);
     array.snap();
     array.set(0, 6);
-    Console.log().println(array.get(0, 0));
+    Logger.log().println(array.get(0, 0));
   }
 }

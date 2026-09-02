@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.*;
 
@@ -52,11 +52,11 @@ public class Q966 {
     Solution sol = new Solution();
     String[] wordList = {"KiTe","kite","hare","Hare"};
     String[] queries = {"kite","Kite","KiTe","Hare","HARE","Hear","hear","keti","keet","keto"};
-    Console.log().println(sol.spellchecker(wordList, queries));
+    Logger.log().println(sol.spellchecker(wordList, queries));
 
     wordList = new String[]{"yellow"};
     queries = new String[]{"YellOw"};
-    Console.log().println(sol.spellchecker(wordList, queries));
+    Logger.log().println(sol.spellchecker(wordList, queries));
 
 
 

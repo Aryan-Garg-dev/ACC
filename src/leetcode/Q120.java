@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.Arrays;
 import java.util.List;
@@ -39,6 +39,6 @@ public class Q120 {
 
     );
 
-    Console.log().println(sol.minimumTotal(triangle));
+    Logger.log().println(sol.minimumTotal(triangle));
   }
 }

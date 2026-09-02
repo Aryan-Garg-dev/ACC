@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 public class Q3197 {
   /*
@@ -134,6 +134,6 @@ public class Q3197 {
       new int[][]{{ 1, 0, 1 }, { 1, 1, 1 }},
       new int[][]{{ 1, 0, 1, 0}, { 0, 1, 0, 1 }},
     };
-    Console.log().println(sol.minimumSum(grids[0]));
+    Logger.log().println(sol.minimumSum(grids[0]));
   }
 }

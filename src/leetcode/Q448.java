@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +31,7 @@ public class Q448 {
 
   public static void main(String[] args) {
     Solution sol = new Solution();
-    Console.log()
+    Logger.log()
       .println(sol.findDisappearedNumbers(new int[]{ 4, 3, 2, 7, 8, 2, 3, 1 }));
   }
 }

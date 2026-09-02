@@ -2,7 +2,7 @@ package AOC2025.DAY1;
 
 import AOC2025.PuzzleLoader;
 import AOC2025.Timer;
-import utility.Console;
+import utility.Logger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -57,7 +57,7 @@ public class Puzzle1 {
   public static void main(String[] args) {
     List<Move> input = loadPuzzle("src/files/input1.txt");
     Timer.measure(()->{
-      Console.log()
+      Logger.log()
         .println(password(50, input))
         .println(password2(50, input));
     });

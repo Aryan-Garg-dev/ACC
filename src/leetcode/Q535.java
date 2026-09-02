@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,8 +26,8 @@ public class Q535 {
   public static void main(String[] args) {
     Codec tinyURL = new Codec();
     String encoded = tinyURL.encode("https://leetcode.com/problems/design-tinyurl");
-    Console.log().println(encoded);
-    Console.log().println(tinyURL.decode(encoded));
+    Logger.log().println(encoded);
+    Logger.log().println(tinyURL.decode(encoded));
   }
 
 }

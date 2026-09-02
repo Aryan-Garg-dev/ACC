@@ -1,7 +1,7 @@
 package AOC2025.DAY2;
 
 import AOC2025.PuzzleLoader;
-import utility.Console;
+import utility.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,10 +66,10 @@ public class Puzzle1 {
     List<long[]> input =  loadPuzzle("src/files/input2.txt");
 
     for (long[] range: input){
-      if (isValidRange(range)) Console.log().println("Valid range: " + range[0] + " - " + range[1]);
+      if (isValidRange(range)) Logger.log().println("Valid range: " + range[0] + " - " + range[1]);
       else {
         long start = _start(range[0]), end = _end(range[1]);
-        Console.log().println(start + " - " + end);
+        Logger.log().println(start + " - " + end);
       }
     }
 

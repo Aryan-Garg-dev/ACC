@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -53,6 +53,6 @@ public class Q3318 {
 
   public static void main(String[] args) {
     int[] nums = {1,1,2,2,3,4,2,3};
-    Console.log().print(new Solution().findXSum(nums, 6, 2));
+    Logger.log().print(new Solution().findXSum(nums, 6, 2));
   }
 }

@@ -1,6 +1,6 @@
 package practice;
 
-import utility.Console;
+import utility.Logger;
 import utility.Input;
 
 public class Visa {
@@ -35,13 +35,13 @@ public class Visa {
 
   public static void main(String... args){
     Input input = new Input();
-    Console console = Console.warn();
+    Logger logger = Logger.warn();
 
     int size = input.prompt("Enter size: ").readInt();
     int[] nums = input.prompt("Enter array: ").readIntArray(size);
     int k = input.prompt("K: ").readInt();
 
     int ans = sumDivisiblyByK(nums, k);
-    console.print("Total Pairs: ").println(ans);
+    logger.print("Total Pairs: ").println(ans);
   }
 }

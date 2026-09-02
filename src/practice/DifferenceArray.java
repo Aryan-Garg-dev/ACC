@@ -1,6 +1,6 @@
 package practice;
 
-import utility.Console;
+import utility.Logger;
 
 public class DifferenceArray {
   // n elements and q queries
@@ -19,7 +19,7 @@ public class DifferenceArray {
   }
 
   public static void main(String[] args) {
-    Console.log().println(
+    Logger.log().println(
       resolveQueries(
         new int[]{0,0,0,0,0,0,0},
         new int[][]{

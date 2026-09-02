@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.PriorityQueue;
 
@@ -28,15 +28,15 @@ public class Q1845 {
 
   public static void main(String[] args) {
     SeatManager sm = new SeatManager(5);
-    Console.log().println(sm.reserve());
+    Logger.log().println(sm.reserve());
     sm.unreserve(1);
-    Console.log().println(sm.reserve());
-    Console.log().println(sm.reserve());
+    Logger.log().println(sm.reserve());
+    Logger.log().println(sm.reserve());
     sm.unreserve(2);
-    Console.log().println(sm.reserve());
+    Logger.log().println(sm.reserve());
     sm.unreserve(1);
-    Console.log().println(sm.reserve());
+    Logger.log().println(sm.reserve());
     sm.unreserve(2);
-    Console.log().println(sm.reserve());
+    Logger.log().println(sm.reserve());
   }
 }

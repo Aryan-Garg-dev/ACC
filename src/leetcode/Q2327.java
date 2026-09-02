@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -61,9 +61,9 @@ public class Q2327 {
     Solution sol = new Solution();
 
     int n = 6, delay = 2, forget = 4;
-    Console.log().println(sol.peopleAwareOfSecret(n, delay, forget));
+    Logger.log().println(sol.peopleAwareOfSecret(n, delay, forget));
 
     n = 4; delay = 1; forget = 3;
-    Console.log().println(sol.peopleAwareOfSecret(n, delay, forget));
+    Logger.log().println(sol.peopleAwareOfSecret(n, delay, forget));
   }
 }

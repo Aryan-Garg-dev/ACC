@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.TreeMap;
 
@@ -24,9 +24,9 @@ public class Q933 {
 
   public static void main(String[] args) {
     RecentCounter counter = new RecentCounter();
-    Console.log().println(counter.ping(1));
-    Console.log().println(counter.ping(100));
-    Console.log().println(counter.ping(3001));
-    Console.log().println(counter.ping(3002));
+    Logger.log().println(counter.ping(1));
+    Logger.log().println(counter.ping(100));
+    Logger.log().println(counter.ping(3001));
+    Logger.log().println(counter.ping(3002));
   }
 }

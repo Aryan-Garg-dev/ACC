@@ -1,6 +1,6 @@
 package competitive_coding_2.cat_2;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,6 +73,6 @@ public class BellmanFord {
     for (int[] edge: graph)
       g.createEdge(edge[0], edge[1], edge[2]);
 
-    Console.log().println(g.bellmanFord(0));
+    Logger.log().println(g.bellmanFord(0));
   }
 }

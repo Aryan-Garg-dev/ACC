@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -56,7 +56,7 @@ public class Q841 {
       List.of(3),
       List.of()
     ));
-    Console.log().println(sol.canVisitAllRooms(rooms));
+    Logger.log().println(sol.canVisitAllRooms(rooms));
 
     rooms = new ArrayList<>(List.of(
       List.of(1, 3),
@@ -64,6 +64,6 @@ public class Q841 {
       List.of(2),
       List.of(0)
     ));
-    Console.log().println(sol.canVisitAllRooms(rooms));
+    Logger.log().println(sol.canVisitAllRooms(rooms));
   }
 }

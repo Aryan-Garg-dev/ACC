@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -37,12 +37,12 @@ public class Q3495 {
     final Solution sol = new Solution();
 
     int[][] query = {{1, 2}, { 2, 4 }};
-    Console.log().println(sol.minOperations(query));
+    Logger.log().println(sol.minOperations(query));
 
     query = new int[][]{{2, 6}};
-    Console.log().println(sol.minOperations(query));
+    Logger.log().println(sol.minOperations(query));
 
     query = new int[][]{{1, 8}};
-    Console.log().println(sol.minOperations(query));
+    Logger.log().println(sol.minOperations(query));
   }
 }

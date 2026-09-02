@@ -1,6 +1,6 @@
 package AOC2025;
 
-import utility.Console;
+import utility.Logger;
 
 import java.time.*;
 import java.util.function.*;
@@ -11,7 +11,7 @@ public class Timer {
     Instant start = Instant.now();
     T result = fn.get();
     Instant end = Instant.now();
-    Console.info()
+    Logger.info()
       .print("Time Elapsed: ")
       .print(Duration.between(start, end).toMillis())
       .println(" ms");
@@ -22,7 +22,7 @@ public class Timer {
     Instant start = Instant.now();
     fn.run();
     Instant end = Instant.now();
-    Console.info()
+    Logger.info()
       .print("Time Elapsed: ")
       .print(Duration.between(start, end).toMillis())
       .println(" ms");

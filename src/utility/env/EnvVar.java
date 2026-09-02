@@ -1,6 +1,6 @@
 package utility.env;
 
-import utility.Console;
+import utility.Logger;
 import utility.Parser;
 import utility.Validation;
 import utility.exceptions.ValidationException;
@@ -57,6 +57,6 @@ public class EnvVar<T> {
 
   @Override
   public String toString() {
-    return Console.stringify(value == null ? defaultValue : value);
+    return Logger.stringify(value == null ? defaultValue : value);
   }
 }

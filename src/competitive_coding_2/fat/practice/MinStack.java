@@ -1,6 +1,6 @@
 package competitive_coding_2.fat.practice;
 
-import utility.Console;
+import utility.Logger;
 import utility.Input;
 
 import java.util.*;
@@ -55,9 +55,9 @@ public class MinStack {
       boolean exit = false;
       switch (operation){
         case 1: minStack.push(input.prompt("Push: ").readInt()); break;
-        case 2: Console.debug().print("POP: ").println(minStack.pop()); break;
-        case 3: Console.debug().print("TOP: ").println(minStack.top()); break;
-        case 4: Console.debug().print("MIN: ").println(minStack.getMin()); break;
+        case 2: Logger.debug().print("POP: ").println(minStack.pop()); break;
+        case 3: Logger.debug().print("TOP: ").println(minStack.top()); break;
+        case 4: Logger.debug().print("MIN: ").println(minStack.getMin()); break;
         default: exit = true;
       }
       if (exit) break;

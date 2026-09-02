@@ -1,4 +1,4 @@
-import utility.Console;
+import utility.Logger;
 import utility.Pair;
 import utility.Validation;
 import utility.env.Dotenv;
@@ -23,7 +23,7 @@ public class Main {
 
     Dotenv env = Dotenv.load();
 
-    Console.log()
+    Logger.log()
       .println(env)
       .println("----------------------------------")
       .println(env.get("HELLO", String.class))
@@ -33,7 +33,7 @@ public class Main {
 
 
     EventEmitter emitter = new EventEmitter();
-    emitter.on("hello", (recipients)->Console.log().print("Hello ").println(recipients));
+    emitter.on("hello", (recipients)->Logger.log().print("Hello ").println(recipients));
     emitter.emit("hello", "World", "Everyone");
 
     

@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 import utility.Input;
 
 import java.util.Arrays;
@@ -52,6 +52,6 @@ public class Q498 {
     }
 
     Solution sol = new Solution();
-    Console.log().print(sol.findDiagonalOrder(matrix));
+    Logger.log().print(sol.findDiagonalOrder(matrix));
   }
 }

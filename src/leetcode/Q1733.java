@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -46,13 +46,13 @@ public class Q1733 {
     int[][] languages = {{1}, {2}, {1, 2}};
     int[][] friendships = {{1, 2}, {1, 3}, {2, 3}};
 
-    Console.log().println(sol.minimumTeachings(n, languages, friendships));
+    Logger.log().println(sol.minimumTeachings(n, languages, friendships));
 
     n = 3;
     languages = new int[][]{{2}, {1, 3}, {1, 2}, {3}};
     friendships = new int[][]{{1, 4}, {1, 2}, {3, 4}, {2, 3}};
 
-    Console.log().println(sol.minimumTeachings(n, languages, friendships));
+    Logger.log().println(sol.minimumTeachings(n, languages, friendships));
   }
 }
 

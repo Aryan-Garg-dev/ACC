@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -35,13 +35,13 @@ public class Q2197 {
   public static void main(String[] args) {
     Solution sol = new Solution();
     int[] nums = {6,4,3,2,7,6,2};
-    Console.log().println(sol.replaceNonCoprimes(nums));
+    Logger.log().println(sol.replaceNonCoprimes(nums));
 
     nums = new int[]{2,2,1,1,3,3,3};
-    Console.log().println(sol.replaceNonCoprimes(nums));
+    Logger.log().println(sol.replaceNonCoprimes(nums));
 
     nums = new int[]{31,97561,97561,97561,97561,97561,97561,97561,97561};
-    Console.log().println(sol.replaceNonCoprimes(nums));
+    Logger.log().println(sol.replaceNonCoprimes(nums));
 
 
   }

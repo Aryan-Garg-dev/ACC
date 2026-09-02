@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 public class Q1975 {
   static class Solution {
@@ -29,12 +29,12 @@ public class Q1975 {
       {1, -1}, {-1, 1}
     };
 
-    Console.log().println(sol.maxMatrixSum(matrix));
+    Logger.log().println(sol.maxMatrixSum(matrix));
 
     matrix = new int[][]{
       { 1, 2, 3 },{ -1, -2, -3 },{ 1, 2, 3 }
     };
 
-    Console.log().println(sol.maxMatrixSum(matrix));
+    Logger.log().println(sol.maxMatrixSum(matrix));
   }
 }

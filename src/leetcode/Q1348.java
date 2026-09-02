@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.*;
 
@@ -53,13 +53,13 @@ public class Q1348 {
     twitter.recordTweet("tweet3", 60);
     twitter.recordTweet("tweet3", 10);
 
-    Console.log()
+    Logger.log()
       .println(twitter.getTweetCountsPerFrequency("minute", "tweet3", 0, 59))
       .println(twitter.getTweetCountsPerFrequency("minute", "tweet3", 0, 60));
 
     twitter.recordTweet("tweet3", 120);
 
-    Console.log()
+    Logger.log()
       .println(twitter.getTweetCountsPerFrequency("hour", "tweet3", 0, 210));
   }
 }

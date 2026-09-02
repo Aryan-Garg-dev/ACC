@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -45,11 +45,11 @@ public class Q911 {
       new int[]{0, 5, 10, 15, 20, 25, 30}
     );
 
-    Console.log().println(t.q(3));
-    Console.log().println(t.q(12));
-    Console.log().println(t.q(25));
-    Console.log().println(t.q(15));
-    Console.log().println(t.q(24));
-    Console.log().println(t.q(8));
+    Logger.log().println(t.q(3));
+    Logger.log().println(t.q(12));
+    Logger.log().println(t.q(25));
+    Logger.log().println(t.q(15));
+    Logger.log().println(t.q(24));
+    Logger.log().println(t.q(8));
   }
 }

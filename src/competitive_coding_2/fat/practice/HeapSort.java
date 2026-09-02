@@ -1,6 +1,6 @@
 package competitive_coding_2.fat.practice;
 
-import utility.Console;
+import utility.Logger;
 import utility.Input;
 
 public class HeapSort {
@@ -34,6 +34,6 @@ public class HeapSort {
     int size = input.prompt("Enter size: ").readInt();
     int[] nums = input.prompt("Enter array: ").readIntArray(size);
     heapSort(nums);
-    Console.debug().println(nums);
+    Logger.debug().println(nums);
   }
 }

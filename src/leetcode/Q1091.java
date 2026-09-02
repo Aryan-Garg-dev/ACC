@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -59,21 +59,21 @@ public class Q1091 {
     Solution sol = new Solution();
 
     int[][] grid = {{ 0, 1 }, { 1, 0 }};
-    Console.log().println(sol.shortestPathBinaryMatrix(grid));
+    Logger.log().println(sol.shortestPathBinaryMatrix(grid));
 
     grid = new int[][]{
       { 0, 0, 0 },
       { 1, 1, 0 },
       { 1, 1, 0 },
     };
-    Console.log().println(sol.shortestPathBinaryMatrix(grid));
+    Logger.log().println(sol.shortestPathBinaryMatrix(grid));
 
     grid = new int[][]{
       { 1, 0, 0 },
       { 1, 1, 0 },
       { 1, 1, 0 },
     };
-    Console.log().println(sol.shortestPathBinaryMatrix(grid));
+    Logger.log().println(sol.shortestPathBinaryMatrix(grid));
 
   }
 }

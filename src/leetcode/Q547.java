@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 public class Q547 {
   static class Solution {
@@ -43,7 +43,7 @@ public class Q547 {
       { 0, 0, 1 },
     };
 
-    Console.log().println(sol.findCircleNum(isConnected));
+    Logger.log().println(sol.findCircleNum(isConnected));
 
     isConnected = new int[][]{
       { 1, 0, 0 },
@@ -51,6 +51,6 @@ public class Q547 {
       { 0, 0, 1 },
     };
 
-    Console.log().println(sol.findCircleNum(isConnected));
+    Logger.log().println(sol.findCircleNum(isConnected));
   }
 }

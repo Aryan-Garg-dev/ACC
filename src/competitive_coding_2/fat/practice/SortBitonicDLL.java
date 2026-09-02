@@ -1,5 +1,5 @@
 package competitive_coding_2.fat.practice;
-import utility.Console;
+import utility.Logger;
 import utility.Input;
 
 import java.util.*;
@@ -102,9 +102,9 @@ public class SortBitonicDLL {
     int size = input.prompt("Enter size: ").readInt();
     int[] arr = input.prompt("Enter a bitonic array: ").readIntArray(size);
     LinkedList list = new LinkedList(arr);
-    Console.log().println(list.toArray());
+    Logger.log().println(list.toArray());
     list.sortBitonic();
-    Console.log().println(list.toArray());
+    Logger.log().println(list.toArray());
   }
 
 

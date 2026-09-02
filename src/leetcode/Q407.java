@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
@@ -56,7 +56,7 @@ public class Q407 {
       {3,2,1,3,2,4},
       {2,3,3,2,3,1}
     };
-    Console.log().println(sol.trapRainWater(heightMap));
+    Logger.log().println(sol.trapRainWater(heightMap));
 
     heightMap = new int[][]{
       {3,3,3,3,3},
@@ -65,7 +65,7 @@ public class Q407 {
       {3,2,2,2,3},
       {3,3,3,3,3},
     };
-    Console.log().println(sol.trapRainWater(heightMap));
+    Logger.log().println(sol.trapRainWater(heightMap));
 
   }
 }

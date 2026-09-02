@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 public class Q2296 {
   static class TextEditor {
@@ -39,9 +39,9 @@ public class Q2296 {
   public static void main(String[] args) {
     TextEditor editor = new TextEditor();
     editor.addText("leetcode");
-    Console.log().println(editor.deleteText(4));
+    Logger.log().println(editor.deleteText(4));
     editor.addText("practice");
-    Console.log()
+    Logger.log()
       .println(editor.cursorRight(3))
       .println(editor.cursorLeft(8))
       .println(editor.deleteText(10))

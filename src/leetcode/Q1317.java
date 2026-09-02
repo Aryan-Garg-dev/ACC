@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 public class Q1317 {
   static class Solution {
@@ -15,6 +15,6 @@ public class Q1317 {
   public static void main(String[] args) {
     Solution sol = new Solution();
 
-    Console.log().print(sol.getNoZeroIntegers(11));
+    Logger.log().print(sol.getNoZeroIntegers(11));
   }
 }

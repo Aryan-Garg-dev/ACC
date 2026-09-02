@@ -1,6 +1,6 @@
 package competitive_coding;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.Comparator;
 import java.util.HashMap;
@@ -94,7 +94,7 @@ public class Huffman {
     Huffman huff = new Huffman("AryanGarg");
     String encoded = huff.encodeString("GAry");
     String decoded = huff.decodeString(encoded);
-    Console.log()
+    Logger.log()
       .print("Encoded: ").println(encoded)
       .print("Decoded: ").println(decoded);
   }

@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -41,8 +41,8 @@ public class Q166 {
 
   public static void main(String[] args) {
     Solution sol = new Solution();
-    Console.log().println(sol.fractionToDecimal(1, 2));
-    Console.log().println(sol.fractionToDecimal(2, 1));
-    Console.log().println(sol.fractionToDecimal(4, 333));
+    Logger.log().println(sol.fractionToDecimal(1, 2));
+    Logger.log().println(sol.fractionToDecimal(2, 1));
+    Logger.log().println(sol.fractionToDecimal(4, 333));
   }
 }

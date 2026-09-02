@@ -1,6 +1,6 @@
 package competitive_coding_2.fat.practice;
 
-import utility.Console;
+import utility.Logger;
 import utility.Input;
 
 public class MergeSortDLL {
@@ -107,8 +107,8 @@ public class MergeSortDLL {
     LinkedList list = new LinkedList(
       input.prompt("Input array: ").readIntArray(size)
     );
-    Console.log().println(list.toArray());
+    Logger.log().println(list.toArray());
     list.head = ListNode.mergeSort(list.head);
-    Console.debug().println(list.toArray());
+    Logger.debug().println(list.toArray());
   }
 }

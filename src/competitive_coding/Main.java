@@ -1,6 +1,6 @@
 package competitive_coding;
 
-import utility.Console;
+import utility.Logger;
 import utility.Input;
 
 import java.math.BigInteger;
@@ -21,17 +21,17 @@ public class Main {
   public static void sievePractice(){
     int limit = input.prompt("Enter limit: ").readInt();
     List<Integer> primes = Sieve.getPrimeNumbers(limit);
-    Console.log().println(primes);
+    Logger.log().println(primes);
 
     int start = input.prompt("Start: ").readInt();
     int end = input.prompt("End: ").readInt();
     primes = Sieve.getPrimeNumbers(start, end);
-    Console.log().println(primes);
+    Logger.log().println(primes);
 
     var twins = Sieve.getTwinPrimes(input.prompt("Limit: ").readInt());
-    Console.log().println(twins);
+    Logger.log().println(twins);
 
-    Console.log()
+    Logger.log()
       .println(
         Sieve
           .stream()
@@ -43,18 +43,18 @@ public class Main {
   public static void eulersPhiPractice(){
     int n = input.prompt("Enter n: ").readInt();
     int phi = EulersPhi.phi(n);
-    Console.log().println(phi);
+    Logger.log().println(phi);
   }
 
   public static void strobogrammaticPractice(){
-    Console.log()
+    Logger.log()
       .println(
         Is.stobogrammatic(input.prompt("Enter number: ").readInt())
       );
   }
 
   public static void binaryPalindromePractice(){
-    Console.log()
+    Logger.log()
       .println(
         Is.binaryPalindrome(input.prompt("Enter Number: ").readInt())
       );
@@ -64,7 +64,7 @@ public class Main {
     int num1 = input.prompt("Enter number 1: ").readInt();
     int num2 = input.prompt("Enter number 2: ").readInt();
     Euclid.Result r = new Euclid.Result(0, 0);
-    Console.log()
+    Logger.log()
       .println(Euclid.gcdExtended(num1, num2, r))
       .printf("x=%d, y=%d", r.x, r.y);
   }
@@ -74,18 +74,18 @@ public class Main {
     var numbers = input.prompt("Enter numbers: ").readIntArray(count);
     var remainders = input.prompt("Enter remainders: ").readIntArray(count);
     var crt = CRT.evaluate(numbers, remainders, count);
-    Console.log().println(crt);
+    Logger.log().println(crt);
   }
 
   public static void majorityElementPractice(){
     var size = input.prompt("Enter size: ").readInt();
     var numbers = input.prompt("Enter numbers: ").readIntArray(size);
     int majorityElement = MajorityElement.of(numbers).getBySorting();
-    Console.log()
+    Logger.log()
       .print("Majority Element by sorting: ")
       .println(majorityElement);
     majorityElement = MajorityElement.of(numbers).getBySorting();
-    Console.log()
+    Logger.log()
       .print("Majority Element by Boyer Moore: ")
       .println(majorityElement);
   }
@@ -93,14 +93,14 @@ public class Main {
   public static void longestSequencePractice(){
     var number = input.prompt("Enter number: ").readInt();
     var longestSequence = LongestSequence.of(1).in(number).get();
-    Console.log()
+    Logger.log()
       .print("Longest Sequence of 1: ")
       .println(longestSequence);
     var longestSequenceAfterFlip = LongestSequence
       .of(1)
       .in(number)
       .getAfterFlip();
-    Console.log()
+    Logger.log()
       .print("Longest Sequence of 1 After Flip: ")
       .println(longestSequenceAfterFlip);
   }
@@ -108,7 +108,7 @@ public class Main {
   public static void karatsubaPractice(){
     int x = input.prompt("Enter X: ").readInt();
     int y = input.prompt("Enter Y: ").readInt();
-    Console.log()
+    Logger.log()
       .printf("%d x %d = %d", x, y, Karatsuba.multiply(x, y))
       .println();
   }
@@ -116,16 +116,16 @@ public class Main {
   public static void leadersPractice(){
     int size = input.prompt("Enter size: ").readInt();
     int[] array = input.prompt("Enter numbers: ").readIntArray(size);
-    Console.log().println(Leaders.in(array));
+    Logger.log().println(Leaders.in(array));
   }
 
   public static void palindromePractice(){
     String str = input.prompt("Enter string: ").readLine();
-    Console.log().println(Palindrome.of(str).isPossible());
-    Console.log()
+    Logger.log().println(Palindrome.of(str).isPossible());
+    Logger.log()
       .print("First Palindrome from Chars: ")
       .println(Palindrome.of(str).first());
-    Console.log()
+    Logger.log()
       .print("Longest Palindrome In String: ")
       .println(Palindrome.getLongest(str));
   }
@@ -134,25 +134,25 @@ public class Main {
     int size = input.prompt("Enter size: ").readInt();
     int[] numbers = input.prompt("Enter number: ").readIntArray(size);
     Rotate.leftInPlace(numbers, 2);
-    Console.log().print(numbers);
+    Logger.log().print(numbers);
   }
 
   public static void sortingPractice(){
     List<String> stringList = input.prompt("Enter strings: ").readWordArray();
     Sorting.naturalOrder(stringList);
-    Console.log().println(stringList);
+    Logger.log().println(stringList);
   }
 
   public static void weightedSubstringPractice(){
     String string = input.prompt("String: ").readLine();
     String weights = input.prompt("Weights: ").readLine();
     int k = input.prompt("Target Weight: ").readInt();
-    Console.log()
+    Logger.log()
       .println(WeightedSubstring.getDistinctSubStrings(string, weights, k));
   }
 
   public static void moveHyphenPractice(){
-    Console.log()
+    Logger.log()
       .println(
         new Move('-').toFront(input.prompt("String: ").readLine())
       );
@@ -162,19 +162,19 @@ public class Main {
     Permutation perm = new Permutation(
       input.prompt("String: ").readLine()
     );
-    Console.log()
+    Logger.log()
       .print("Total possible permutations: ").println(perm.getTotal());
-    for (String p: perm) Console.log().println(p);
+    for (String p: perm) Logger.log().println(p);
   }
 
   public static void maneuveringPractice(){
     int rows = input.prompt("Enter no. of rows: ").readInt();
     int cols = input.prompt("Enter no. of cols: ").readInt();
-    Console.log().println(Maneuver.getTotalPaths(rows, cols));
+    Logger.log().println(Maneuver.getTotalPaths(rows, cols));
   }
 
   public static void combinationPractice(){
-    Console.log()
+    Logger.log()
       .println(Combination.get(
         input.readIntArray(input.prompt("Size: ").readInt()),
         input.prompt("k: ").readInt()

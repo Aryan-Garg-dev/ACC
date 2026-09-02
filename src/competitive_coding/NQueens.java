@@ -1,6 +1,6 @@
 package competitive_coding;
 
-import utility.Console;
+import utility.Logger;
 
 public class NQueens {
   public static int ans;
@@ -16,7 +16,7 @@ public class NQueens {
   private static void solve(int row, int cols, int diag1, int diag2, int n) {
     if (row == n) {
       ans++;
-      Console.log().print(queenPos);
+      Logger.log().print(queenPos);
       return;
     }
 

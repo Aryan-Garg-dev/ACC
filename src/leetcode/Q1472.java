@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,12 +43,12 @@ public class Q1472 {
     history.visit("google.com");
     history.visit("facebook.com");
     history.visit("youtube.com");
-    Console.log()
+    Logger.log()
       .println(history.back(1))
       .println(history.back(1))
       .println(history.forward(1));
     history.visit("linkedin.com");
-    Console.log()
+    Logger.log()
       .println(history.forward(2))
       .println(history.back(2))
       .println(history.back(7));

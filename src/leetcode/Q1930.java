@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -36,7 +36,7 @@ public class Q1930 {
   public static void main(String[] args) {
     Solution sol = new Solution();
 
-    Console.log()
+    Logger.log()
       .println(sol.countPalindromicSubsequence("aabca"))
       .println(sol.countPalindromicSubsequence("adc"))
       .println(sol.countPalindromicSubsequence("bbcbaba"));

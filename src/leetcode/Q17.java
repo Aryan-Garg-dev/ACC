@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +40,6 @@ public class Q17 {
 
   public static void main(String[] args) {
     Solution sol = new Solution();
-    Console.log().println(sol.letterCombinations("23"));
+    Logger.log().println(sol.letterCombinations("23"));
   }
 }

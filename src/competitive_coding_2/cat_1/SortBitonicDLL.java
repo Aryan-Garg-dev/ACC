@@ -1,6 +1,6 @@
 package competitive_coding_2.cat_1;
 
-import utility.Console;
+import utility.Logger;
 
 public class SortBitonicDLL {
   public static class ListNode {
@@ -102,7 +102,7 @@ public class SortBitonicDLL {
   public static void main(String[] args) {
     LinkedList list = new LinkedList(new int[]{ 5, 7, 9, 10, 4, 2, 1 });
     sortBitonicDLL(list);
-    Console.log().println(list.toArray());
+    Logger.log().println(list.toArray());
   }
 }
 

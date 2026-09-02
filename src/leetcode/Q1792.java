@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Console;
+import utility.Logger;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
@@ -44,10 +44,10 @@ public class Q1792 {
 
       int[][] classes = {{ 1, 2 }, { 3, 5 }, { 2, 2 }};
       int extraStudents = 2;
-      Console.log().println(sol.maxAverageRatio(classes, extraStudents));
+      Logger.log().println(sol.maxAverageRatio(classes, extraStudents));
 
       classes = new int[][]{{2, 4}, {3, 9}, {4, 5}, {2, 10}};
       extraStudents = 4;
-    Console.log().println(sol.maxAverageRatio(classes, extraStudents));
+    Logger.log().println(sol.maxAverageRatio(classes, extraStudents));
   }
 }

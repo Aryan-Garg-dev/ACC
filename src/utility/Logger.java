@@ -1,10 +1,8 @@
 package utility;
 
 import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.List;
 
-public class Console {
+public class Logger {
   private static final String RESET = "\u001B[0m";
   private static final String DEBUG = "\u001B[34m"; // Blue
   private static final String INFO  = "\u001B[36m"; // Cyan
@@ -17,29 +15,29 @@ public class Console {
 
   private Level currentLevel = Level.LOG;
 
-  private Console() {};
-  private Console(Level level){
+  private Logger() {};
+  private Logger(Level level){
     this.currentLevel = level;
   }
 
-  public static Console log() {
-    return new Console(Level.LOG);
+  public static Logger log() {
+    return new Logger(Level.LOG);
   }
 
-  public static Console error() {
-    return new Console(Level.ERROR);
+  public static Logger error() {
+    return new Logger(Level.ERROR);
   }
 
-  public static Console warn() {
-    return new Console(Level.WARN);
+  public static Logger warn() {
+    return new Logger(Level.WARN);
   }
 
-  public static Console info() {
-    return new Console(Level.INFO);
+  public static Logger info() {
+    return new Logger(Level.INFO);
   }
 
-  public static Console debug() {
-    return new Console(Level.DEBUG);
+  public static Logger debug() {
+    return new Logger(Level.DEBUG);
   }
 
   private String colorize(String message) {
@@ -79,22 +77,22 @@ public class Console {
     return sb.toString();
   }
 
-  public Console print(Object message) {
+  public Logger print(Object message) {
     System.out.print(colorize(stringify(message)));
     return this;
   }
 
-  public Console println(Object message) {
+  public Logger println(Object message) {
     System.out.println(colorize(stringify(message)));
     return this;
   }
 
-  public Console println() {
+  public Logger println() {
     System.out.println();
     return this;
   }
 
-  public Console printf(String format, Object... args) {
+  public Logger printf(String format, Object... args) {
     String formatted = String.format(format, args);
     System.out.print(colorize(formatted));
     return this;
