@@ -1,6 +1,6 @@
 package competitive_coding_2.fat.practice;
 
-import utility.Logger;
+import utility.logger.Logger;
 import utility.Input;
 
 public class HeapSort {

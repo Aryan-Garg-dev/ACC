@@ -1,6 +1,6 @@
 package data_structures;
 
-import utility.Logger;
+import utility.logger.Logger;
 
 public class Trie {
   public static final int CHILDREN_LIMIT = 26;

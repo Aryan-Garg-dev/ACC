@@ -1,6 +1,6 @@
 package challenges;
 
-import utility.Logger;
+import utility.logger.Logger;
 import utility.Input;
 import utility.IntArray;
 

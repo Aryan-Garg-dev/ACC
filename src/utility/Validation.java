@@ -41,8 +41,6 @@ public final class Validation<T> {
     return custom(regexValidator(Pattern.compile(regex), "Invalid value"));
   }
 
-
-
   private static Validator<String> regexValidator(
     Pattern pattern,
     String errorMessage

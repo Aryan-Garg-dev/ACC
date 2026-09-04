@@ -1,7 +1,7 @@
 package network_sockets.udp;
 
 import utility.Input;
-import utility.Logger;
+import utility.logger.Logger;
 
 import java.io.Closeable;
 import java.io.IOException;

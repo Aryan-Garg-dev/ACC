@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Logger;
+import utility.logger.Logger;
 
 import java.util.LinkedList;
 import java.util.Queue;

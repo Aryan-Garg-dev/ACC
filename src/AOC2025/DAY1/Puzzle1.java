@@ -2,7 +2,7 @@ package AOC2025.DAY1;
 
 import AOC2025.PuzzleLoader;
 import AOC2025.Timer;
-import utility.Logger;
+import utility.logger.Logger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;

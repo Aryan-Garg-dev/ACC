@@ -1,6 +1,6 @@
 package competitive_coding_2.cat_2;
 
-import utility.Logger;
+import utility.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.List;

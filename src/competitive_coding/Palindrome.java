@@ -1,6 +1,6 @@
 package competitive_coding;
 
-import utility.Logger;
+import utility.logger.Logger;
 
 class Manacher {
   private static char[] transformString(String s){

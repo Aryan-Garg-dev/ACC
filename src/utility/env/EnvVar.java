@@ -1,6 +1,6 @@
 package utility.env;
 
-import utility.Logger;
+import utility.logger.Logger;
 import utility.Parser;
 import utility.Validation;
 import utility.exceptions.ValidationException;

@@ -1,4 +1,4 @@
-import utility.Logger;
+import utility.logger.Logger;
 import utility.Pair;
 import utility.Validation;
 import utility.env.Dotenv;

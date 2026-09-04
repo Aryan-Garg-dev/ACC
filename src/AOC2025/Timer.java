@@ -1,6 +1,6 @@
 package AOC2025;
 
-import utility.Logger;
+import utility.logger.Logger;
 
 import java.time.*;
 import java.util.function.*;

@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Logger;
+import utility.logger.Logger;
 
 public class Q1975 {
   static class Solution {

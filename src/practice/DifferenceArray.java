@@ -1,6 +1,6 @@
 package practice;
 
-import utility.Logger;
+import utility.logger.Logger;
 
 public class DifferenceArray {
   // n elements and q queries

@@ -1,6 +1,6 @@
 package competitive_coding_2.cat_1;
 
-import utility.Logger;
+import utility.logger.Logger;
 
 public class SortBitonicDLL {
   public static class ListNode {

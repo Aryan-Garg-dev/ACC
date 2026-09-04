@@ -1,7 +1,7 @@
 package AOC2025.DAY2;
 
 import AOC2025.PuzzleLoader;
-import utility.Logger;
+import utility.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.List;

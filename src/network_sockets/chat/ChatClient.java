@@ -1,6 +1,6 @@
 package network_sockets.chat;
 
-import utility.Logger;
+import utility.logger.Logger;
 
 import java.io.*;
 import java.net.Socket;

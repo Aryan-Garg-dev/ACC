@@ -1,6 +1,6 @@
 package competitive_coding;
 
-import utility.Logger;
+import utility.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.Comparator;

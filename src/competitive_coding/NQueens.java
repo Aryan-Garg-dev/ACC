@@ -1,6 +1,6 @@
 package competitive_coding;
 
-import utility.Logger;
+import utility.logger.Logger;
 
 public class NQueens {
   public static int ans;

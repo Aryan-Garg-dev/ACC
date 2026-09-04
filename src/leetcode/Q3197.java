@@ -1,6 +1,6 @@
 package leetcode;
 
-import utility.Logger;
+import utility.logger.Logger;
 
 public class Q3197 {
   /*
